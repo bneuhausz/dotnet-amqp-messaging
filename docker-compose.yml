@@ -1,0 +1,15 @@
+services:
+  artemis:
+    image: apache/activemq-artemis:latest-alpine
+    container_name: artemis
+    ports:
+      - "8161:8161" # Web Console
+      - "5672:5672" # AMQP
+    environment:
+      - ARTEMIS_USER=admin
+      - ARTEMIS_PASSWORD=admin
+    volumes:
+      - dotnet-artemis:/var/lib/artemis-instance
+
+volumes:
+  dotnet-artemis:
