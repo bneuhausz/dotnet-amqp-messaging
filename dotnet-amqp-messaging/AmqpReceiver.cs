@@ -1,7 +1,7 @@
 ﻿using Amqp;
 
 namespace dotnet_amqp_messaging;
-public class AmqpListener
+public class AmqpReceiver
 {
     public async Task StartListeningAsync(CancellationToken cancellationToken)
     {

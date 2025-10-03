@@ -14,7 +14,7 @@ Console.CancelKeyPress += (sender, eventArgs) =>
     Console.WriteLine("Shutting down...");
 };
 
-var listener = new AmqpListener();
-await listener.StartListeningAsync(cts.Token);
+var receiver = new AmqpReceiver();
+await receiver.StartListeningAsync(cts.Token);
 
 Console.WriteLine("Application has shut down.");
